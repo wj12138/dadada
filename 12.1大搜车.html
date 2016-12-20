@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;}
+        ol,li,ul{margin:0; padding:0;}
+        :focus { outline: 0 none; }
+        table { border-collapse: collapse; border-spacing: 0; }
+        caption, th, td { font-weight: normal; text-align: left; }
+        a img, iframe { border: medium none; }
+        ol, ul { list-style: none outside none; }
+        input, textarea, select, button { font-family: inherit; font-size: 100%; }
+        body { font-family: "微软雅黑"; font-size: 12px;}
+        /*
+        reset CSS:重置
+        */
+        *{
+            padding:0px;
+            margin:0px;
+            color:#000000;
+            font-family:微软雅黑;
+            text-decoration:none;
+            list-style:none;
+        }
+        .clear{
+        clear:both;}
+        .header {
+            height:80px;
+        }
+        .header .top-one{
+            height:4px;
+            background:#FF571A;
+        }
+        .header .navigation-bar{
+            height:76px;
+            border-bottom:1px solid #979697;
+        }
+        .navigation-bar .nav{
+            height:76px;
+            line-height:76px;
+            width:1182px;
+            margin:0 auto;
+            position:relative;
+        }
+        .nav .logo{
+            height:36px;
+            width:82px;
+            background:url("images/logo.png") no-repeat;
+            float:left;
+            margin-top:18px;
+            cursor:pointer;
+        }
+        .nav .quyu{
+            height:28px;
+            line-height:28px;
+            width:86px;
+            margin:22px 0 0 18px;
+            border:1px solid #EDEDED;
+            text-align:center;
+            float:left;
+            position:relative;
+            cursor:pointer;
+        }
+        .nav a{
+            font-size:14px;
+            cursor:pointer;
+        }
+        .nav .xiala{
+            width:11px;
+            height:7px;
+            background:url(images/icon4_02.png) no-repeat;
+            position:absolute;
+            top:12px;
+            left:70px;
+        }
+        .nav .nav1{
+            width:418px;
+            height:76px;
+            line-height: 76px;
+            float:left;
+            font-size:14px;
+        }
+        .nav1 a{
+            cursor:pointer;
+            margin-left:29px;
+        }
+        .nav1 a:hover{
+            color:#FF571A;
+        }
+        .nav input{
+            width:216px;
+            height:28px;
+            margin-left:37px;
+            border:2px solid #E6E6E6;
+            float:left;
+            padding-left:7px;
+            margin-top:22px;
+        }
+        .nav .fangdajing{
+            width:20px;
+            height:20px;
+            background:url(images/icon3.png) no-repeat 0 -35px;
+            position:absolute;
+            top:30px;
+            left:845px;
+            cursor:pointer;
+        }
+        .nav .fangdajing:hover{
+            width:20px;
+            height:20px;
+            background:url(images/icon3.png) no-repeat 0 -55px;
+            position:absolute;
+            top:30px;
+            left:845px;
+        }
+        .nav .nav2{
+            width:262px;
+            height:76px;
+            line-height:76px;
+            float:left;
+            margin-left:50px;
+        }
+        .nav2 a{
+            font-size:12px;
+            cursor:pointer;
+            margin-left:15px;
+            float:left;
+        }
+        .nav2 a:hover{
+            color:#FF571A;
+            float:left;
+        }
+        .nav2 .shuxian{
+            width:1px;
+            height:20px;
+            border-left:1px solid #EEEEEE;
+            float:left;
+            margin:30px;
+        }
+        .nav2 .dianhua{
+            width:119px;
+            height:16px;
+            background:url(images/icon.png) no-repeat;
+            float:left;
+            margin-top:30px;
+        }
+        .lunbotu{
+            width: 100%;
+            height:460px;
+            border-bottom:1px solid #979697;
+            overflow: hidden;
+        }
+        .lunbotu .tu1{
+            height:100%;
+            width:100%;
+            background:url(images/banner1.jpg) no-repeat;
+            background-size:100% 100%;
+        }
+        .subnav{
+            height:140px;
+        }
+        .subnav .juzhong{
+           width:1180px;
+           margin:0 auto;
+        }
+        .juzhong .xuanze1{
+            width:442px;
+            height:100px;
+            float:left;
+            border-right:1px solid #EEEEEE;
+            margin-top:20px;
+        }
+        .xuanze1 .pinpai{
+            width:414px;
+            height:40px;
+            font-size:16px;
+            font-weight:bold;
+            line-height:40px;
+            padding-left:24px;
+        }
+        .xuanze1 .biaozhi{
+            width:414px;
+            height:60px;
+            padding-left:24px;
+        }
+        .biaozhi .bm{
+            width:48px;
+            height:54px;
+            float:left;
+            cursor:pointer;
+        }
+        .bm .bm1{
+            height:24px;
+            width:32px;
+            background:url(images/brand-20.png) no-repeat;
+            background-size:cover;
+            margin:0 auto;
+        }
+        .bm .bm2{
+            width:48px;
+            height:30px;
+            line-height:30px;
+            font-size:12px;
+            color:#666666;
+            text-align:center;
+        }
+        .bm:hover .bm2{
+            color:#FF571A;
+        }
+        .juzhong .xuanze2{
+            width:436px;
+            height:100px;
+            float:left;
+            border-right:1px solid #EEEEEE;
+            margin-top:20px;
+        }
+        .xuanze2 .chexing{
+            width:412px;
+            height:40px;
+            padding-left:24px;
+            font-size:16px;
+            font-weight:bold;
+            line-height:40px;
+        }
+        .xuanze2 .xinghao{
+            width:412px;
+            height:58px;
+            padding-left:24px;
+        }
+        .xinghao .zhunxinghao{
+            width:56px;
+            height:55px;
+            cursor:pointer;
+            float:left;
+        }
+        .zhunxinghao .chexing2{
+            width:50px;
+            height:20px;
+            background:url(images/cx1.png) no-repeat;
+            background-size:cover;
+            margin:0 auto;
+            margin:3px 0;
+        }
+        .zhunxinghao .chexing3{
+            width:56px;
+            height:30px;
+            line-height:30px;
+            font-size:12px;
+            color:#666666;
+            text-align:center;
+        }
+        .zhunxinghao:hover .chexing3{
+            color:#FF571A;
+        }
+        .juzhong .xuanze3{
+            width:292px;
+            height:100px;
+            float:left;
+            margin-top:20px;
+        }
+        .xuanze3 .jiage{
+            width:266px;
+            height:40px;
+            padding-left:24px;
+            font-size:16px;
+            font-weight:bold;
+            line-height:40px;
+        }
+        .xuanze3 .fenlei{
+            width:266px;
+            height:58px;
+            padding-left:24px;
+        }
+        .fenlei a{
+            width:17px;
+            height:51px;
+        }
+        .content{
+            height:1120px;
+            background:#F2F2F2;
+        }
+        .guanggao{
+            height:313px;
+            margin:80px 0;
+        }
+        .footer{
+            height:402px;
+            margin-top:25px;
+            background:#1F1F1F;
+        }
+        .footer .footer1{
+            width:1180px;
+            height:342px;
+            padding:30px 0;
+            margin:0 auto;
+        }
+        .footer1 .footer2{
+            height:159px;
+        }
+        .footer2 .daogou{
+            width:104px;
+            height:190px;
+            margin-bottom: 30px;
+        }
+        .daogou h5{
+            font-size:15px;
+            color:#FFF;
+            font-weight: bold;
+            margin-bottom:10px;
+            display:block;
+        }
+        .daogou a{
+            width:190px;
+            height:25px;
+            line-height:25px;
+            color:#717171;
+        }
+        .daogou a:hover{
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="top-one"></div>
+    <div class="navigation-bar">
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="quyu">
+                <a href="#">北京</a>
+                <div class="xiala"></div>
+            </div>
+            <div class="nav1">
+                <a href="#">首页</a>
+                <a href="#">我要买车</a>
+                <a href="#">我要卖车</a>
+                <a href="#">商家服务</a>
+                <a href="#">关于我们</a>
+            </div>
+            <input type="text" placeholder="搜索">
+            <div class="fangdajing"></div>
+            <div class="nav2">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <div class="shuxian"></div>
+                <div class="dianhua"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="lunbotu">
+    <div class="tu1"></div>
+</div>
+<div class="subnav">
+    <div class="juzhong">
+        <div class="xuanze1">
+            <div class="pinpai">品牌</div>
+            <div class="biaozhi">
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="bm">
+                    <div class="bm1"></div>
+                    <div class="bm2">宝马</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="xuanze2">
+            <div class="chexing">车型</div>
+            <div class="xinghao">
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+                <div class="zhunxinghao">
+                    <div class="chexing2"></div>
+                    <div class="chexing3">SUV</div>
+                </div>
+            </div>
+        </div>
+        <div class="xuanze3">
+            <div class="jiage">价格</div>
+            <div class="fenlei"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="content"></div>
+<div class="guanggao"></div>
+<div class="footer">
+    <div class="footer1">
+        <div class="footer2">
+            <div class="daogou">
+                <h5>导购大全</h5>
+                <a href="http://www.souche.com/sitemap/area.html">城市大全</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>
